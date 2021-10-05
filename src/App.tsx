@@ -1,12 +1,14 @@
 import React from 'react';
-import {Text} from "./components/atoms/Text/Text";
-import {Image} from "./components/atoms/Image/Image";
+import {Text} from "components/atoms/Text/Text";
+import {Avatar} from "components/atoms/Avatar/Avatar";
+import {Icon} from "components/atoms/Icon/Icon";
 
 function App() {
     return (
         <div className="App">
-            <Text text={"my name is fatih"}/>
-            <Image src={"https://m.media-amazon.com/images/I/5156FefjlqL._SX425_.jpg"}/>
+            <Text text={"I am Fatih"}/>
+            <Avatar src={"randomAvatarUrl"} size={50}/>
+            <Icon iconFileName={"filled_chat_orange"}/>
         </div>
     );
 }
