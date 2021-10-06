@@ -1,0 +1,27 @@
+.headerBase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 16px;
+}
+
+.headerBaseLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.headerBaseRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.headerBaseLeftIconTextBetween {
+    width: 12px;
+}

@@ -1,14 +1,19 @@
 // @flow
 import * as React from 'react';
-import {Image} from "components/atoms/Image/Image";
-import {AssetType, getAssetUrl} from "constants/image";
+import {AssetType} from "constants/asset";
+import {getAssetUrl} from "utilities/assetUtility";
 
 type Props = {
-    iconFileName: string
+    iconFileName: string,
+    size: number
 };
 export const Icon = (props: Props) => {
     const iconUrl = getAssetUrl(AssetType.ICON, props.iconFileName);
     return (
-        <Image src={iconUrl}/>
+        <img
+            src={iconUrl}
+            style={{height: props.size, width: props.size}}
+            alt={"someIcon"}
+        />
     );
 };

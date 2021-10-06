@@ -1,14 +1,11 @@
 import React from 'react';
-import {Text} from "components/atoms/Text/Text";
-import {Avatar} from "components/atoms/Avatar/Avatar";
-import {Icon} from "components/atoms/Icon/Icon";
+import styles from './app.module.css';
+import {HeaderHome} from "components/organisms/Header/HeaderHome";
 
 function App() {
     return (
-        <div className="App">
-            <Text text={"I am Fatih"}/>
-            <Avatar src={"randomAvatarUrl"} size={50}/>
-            <Icon iconFileName={"filled_chat_orange"}/>
+        <div className={styles.app}>
+            <HeaderHome/>
         </div>
     );
 }
