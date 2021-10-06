@@ -1,9 +1,11 @@
 import React from 'react';
+import styles from './app.module.css';
+import {HeaderHome} from "components/organisms/Header/HeaderHome";
 
 function App() {
     return (
-        <div className="App">
-            <p>FATCHAT-{process.env.REACT_APP_PROFILE}</p>
+        <div className={styles.app}>
+            <HeaderHome/>
         </div>
     );
 }
