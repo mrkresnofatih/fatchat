@@ -1,0 +1,28 @@
+.infoBase {
+    display: flex;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
+    margin-bottom: 16px;
+}
+
+.infoBaseThumbnailContainer {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 70px;
+}
+
+.infoBaseContentContainer {
+    flex: 1;
+    height: 100%;
+}
+
+.infoBaseThumbnailContainer :first-child {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 100%;
+}
