@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './app.module.css';
-import {HeaderHome} from "components/organisms/Header/HeaderHome";
 import {Content} from "components/atoms/Content/Content";
 import {InfoContactBase} from "components/organisms/Info/InfoContactBase";
+import {HeaderChatroom} from "components/organisms/Header/HeaderChatroom";
 
 function App() {
     return (
         <div className={styles.app}>
-            <HeaderHome/>
+            <HeaderChatroom title={"Kresno Fatih"} subtitle={"Grinding in Bandung!"}/>
             <Content>
                 <InfoContactBase
                     imageUrl={"https://pbs.twimg.com/profile_images/1131624264405327873/1YpVVtxD_400x400.jpg"}
