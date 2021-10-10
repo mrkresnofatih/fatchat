@@ -1,0 +1,27 @@
+.bubbleTextContainer {
+    padding: 12px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.bubbleChatIsSelf {
+    background-color: #FF4C29;
+}
+
+.bubbleChatIsNotSelf {
+    background-color: #2C394B;
+}
+
+.bubbleText {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.bubbleTextIsSelf {
+    color: white;
+}
+
+.bubbleTextIsNotSelf {
+    color: white;
+}
