@@ -4,12 +4,16 @@ import {Content} from "components/atoms/Content/Content";
 import {InfoContactBase} from "components/organisms/Info/InfoContactBase";
 import {Message} from "components/organisms/Message/Message";
 import {HeaderHome} from "components/organisms/Header/HeaderHome";
+import {TextInput} from "components/atoms/Input/TextInput";
 
 function App() {
     return (
         <div className={styles.app}>
             <HeaderHome/>
             <Content>
+                <TextInput
+                    label={"username"}
+                />
                 <InfoContactBase
                     imageUrl={"https://i.pinimg.com/236x/25/15/5d/25155d81c8fe86c204b0243e2407e3a3.jpg"}
                     contactName={"Kresno Fatih"}
