@@ -1,0 +1,36 @@
+.requestContainer {
+    border-radius: 10px;
+    overflow: hidden;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1));
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.baseButton {
+    bottom: 0;
+    padding: 5px;
+    height: 26px;
+    width: 65px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acceptButton {
+    background-color: #77D970;
+    right: 0;
+}
+
+.declineButton {
+    background-color: #FF0075;
+    right: 75px;
+    border-top-left-radius: 10px;
+}
+
+.acceptText {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
