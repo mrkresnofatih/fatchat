@@ -8,17 +8,20 @@ type Props = {
     imageUrl: string,
     contactName: string,
     contactStatus: string,
-    onAccept: ()=>void,
-    onDecline: ()=>void
+    onAccept: () => void,
+    onDecline: () => void,
+    onProfileView: ()=>void
 };
 export const InfoContactRequest = (props: Props) => {
     return (
         <div className={styles.requestContainer}>
-            <InfoContactBase
-                imageUrl={props.imageUrl}
-                contactName={props.contactName}
-                contactStatus={props.contactStatus}
-            />
+            <Button onClick={props.onProfileView}>
+                <InfoContactBase
+                    imageUrl={props.imageUrl}
+                    contactName={props.contactName}
+                    contactStatus={props.contactStatus}
+                />
+            </Button>
             <Button onClick={props.onAccept}>
                 <label className={`${styles.baseButton} ${styles.acceptButton}`}>
                     <p className={styles.acceptText}>Accept</p>

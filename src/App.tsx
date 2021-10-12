@@ -20,6 +20,7 @@ function App() {
                     contactStatus={"Just keep swimming!"}
                     onAccept={()=>console.log("accept")}
                     onDecline={()=>console.log("decline")}
+                    onProfileView={()=>console.log("viewing profile")}
                 />
                 <Message
                     avatarUrl={"https://i.pinimg.com/236x/25/15/5d/25155d81c8fe86c204b0243e2407e3a3.jpg"}
