@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import {ReactNode} from 'react';
+import styles from './button.module.css';
 
 type Props = {
     onClick: () => void;
@@ -14,7 +15,7 @@ export const Button = (props: Props) => {
     }
     const clickFunction = (props.stopPropagation === undefined || false) ? props.onClick : clickWithStopPropagation;
     return (
-        <div onClick={clickFunction}>
+        <div onClick={clickFunction} className={styles.button}>
             {props.children}
         </div>
     );

@@ -6,7 +6,10 @@ import styles from './textinput.module.css';
 
 type Props = {
     label: string,
-    onChange?: (p: string) => void
+    onChange?: (p: string) => void,
+    backgroundColor?: string,
+    color?: string,
+    placeHolder?: string
 };
 export const TextInput = (props: Props) => {
     const [text, setText] = useState<string>("");
@@ -23,9 +26,12 @@ export const TextInput = (props: Props) => {
                     className={styles.textInputContainer}
                     value={text}
                     onChange={onChange}
+                    style={{color: props.color}}
+                    placeholder={props.placeHolder}
                 />
             }
             label={props.label}
+            backgroundColor={props.backgroundColor}
         />
     );
 };

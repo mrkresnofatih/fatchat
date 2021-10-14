@@ -5,6 +5,8 @@ import {Message} from "components/organisms/Message/Message";
 import {HeaderHome} from "components/organisms/Header/HeaderHome";
 import {TextInput} from "components/atoms/Input/TextInput";
 import {InfoContactRequest} from "components/organisms/Info/InfoContactRequest";
+import {InfoContactAdd} from "components/organisms/Info/InfoContactAdd";
+import {ButtonSpan} from "components/organisms/Button/ButtonSpan";
 
 function App() {
     return (
@@ -13,6 +15,17 @@ function App() {
             <Content>
                 <TextInput
                     label={"username"}
+                    backgroundColor={"#334756"}
+                    color={"white"}
+                    placeHolder={"Minimum 6 letters"}
+                />
+                <ButtonSpan text={"Search"} onClick={()=>console.log("hello")}/>
+                <InfoContactAdd
+                    imageUrl={"https://i.pinimg.com/236x/25/15/5d/25155d81c8fe86c204b0243e2407e3a3.jpg"}
+                    contactName={"My Waifu"}
+                    contactStatus={"Work Hard My Love"}
+                    onAdd={()=>console.log("add")}
+                    onProfileView={()=>console.log("profile view")}
                 />
                 <InfoContactRequest
                     imageUrl={"https://i.pinimg.com/236x/25/15/5d/25155d81c8fe86c204b0243e2407e3a3.jpg"}
