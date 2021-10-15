@@ -1,0 +1,18 @@
+.sectionDiv {
+    height: 10px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.sectionText {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font-size: 18px;
+    padding: 0 12px;
+    margin: 0;
+    color: white;
+    background-color: #334756;
+}

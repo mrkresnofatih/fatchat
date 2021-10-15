@@ -7,12 +7,14 @@ import {TextInput} from "components/atoms/Input/TextInput";
 import {InfoContactRequest} from "components/organisms/Info/InfoContactRequest";
 import {InfoContactAdd} from "components/organisms/Info/InfoContactAdd";
 import {ButtonSpan} from "components/organisms/Button/ButtonSpan";
+import {Section} from "components/atoms/Section/Section";
 
 function App() {
     return (
         <div className={styles.app}>
             <HeaderHome/>
             <Content>
+                <Section text={"Friends"}/>
                 <TextInput
                     label={"username"}
                     backgroundColor={"#334756"}
