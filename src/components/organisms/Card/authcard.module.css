@@ -1,0 +1,19 @@
+.authCard {
+    padding: 16px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.authCardTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF4C29;
+    margin: 0;
+}
+
+.authCardAvatarBox {
+    display: flex;
+    justify-content: center;
+}
