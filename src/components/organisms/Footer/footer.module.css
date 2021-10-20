@@ -1,0 +1,23 @@
+.footerContainer {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #2C394B;
+}
+
+.footerButton {
+    background-color: #2C394B;
+    padding: 16px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footerActive {
+    background-color: #FF4C29;
+}
+
+.footButtonLabel {
+    flex: 1;
+}

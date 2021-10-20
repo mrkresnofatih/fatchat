@@ -8,6 +8,8 @@ import {InfoContactRequest} from "components/organisms/Info/InfoContactRequest";
 import {InfoContactAdd} from "components/organisms/Info/InfoContactAdd";
 import {ButtonSpan} from "components/organisms/Button/ButtonSpan";
 import {Section} from "components/atoms/Section/Section";
+import {Footer} from "./components/organisms/Footer/Footer";
+import {IconFileNames} from "./constants/asset";
 
 function App() {
     return (
@@ -59,6 +61,30 @@ function App() {
                     isSelf={false}
                 />
             </Content>
+            <Footer footerObjects={
+                [
+                    {
+                        iconFileName: IconFileNames.CONTACTS_WHITE,
+                        size: 30,
+                        onClick: ()=>console.log("contacts")
+                    },
+                    {
+                        iconFileName: IconFileNames.OUTLINE_CHAT_WHITE,
+                        size: 30,
+                        onClick: ()=>console.log("chats")
+                    },
+                    {
+                        iconFileName: IconFileNames.PERSON_WHITE,
+                        size: 30,
+                        onClick: ()=>console.log("profile")
+                    },
+                    {
+                        iconFileName: IconFileNames.MORE_VERTICAL_WHITE,
+                        size: 30,
+                        onClick: ()=>console.log("more")
+                    }
+                ]
+            }/>
         </div>
     );
 }

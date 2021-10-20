@@ -12,7 +12,7 @@ export const Icon = (props: Props) => {
     return (
         <img
             src={iconUrl}
-            style={{height: props.size, width: props.size}}
+            style={{height: props.size, width: props.size, margin: 0}}
             alt={"someIcon"}
         />
     );
