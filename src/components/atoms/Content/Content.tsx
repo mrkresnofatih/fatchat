@@ -8,8 +8,10 @@ type Props = {
 };
 export const Content = (props: Props) => {
     return (
-        <div className={`${styles.contentBase}`}>
-            {props.children}
+        <div className={styles.contentBox}>
+            <div className={`${styles.contentBase}`}>
+                {props.children}
+            </div>
         </div>
     );
 };
