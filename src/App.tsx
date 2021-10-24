@@ -20,10 +20,6 @@ function App() {
                                 name:   "Password",
                                 type:   "text",
                                 info:   "max 7 letters"
-                            },{
-                                name:   "FullName",
-                                type:   "text",
-                                info:   "minimum 3 letters"
                             }
                         ]
                     }

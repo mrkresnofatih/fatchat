@@ -1,0 +1,27 @@
+.selectInputContainer {
+    position: relative;
+}
+
+.selectInputMainBox {
+    font-size: 18px;
+    padding: 21px 14px 13px;
+    background-color: white;
+}
+
+.borderRound {
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.selectInputOptions {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    z-index: 2;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}

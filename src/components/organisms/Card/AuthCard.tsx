@@ -6,6 +6,7 @@ import {Text} from "../../atoms/Text/Text";
 import {Avatar} from "../../atoms/Avatar/Avatar";
 import {TextInput} from "../../atoms/Input/TextInput";
 import {ButtonSpan} from "../Button/ButtonSpan";
+import {SelectInput} from "../../atoms/Input/SelectInput";
 
 type inputField = {
     name: string,
@@ -29,6 +30,7 @@ export const AuthCard = (props: Props) => {
         console.log({...state, [n]: p});
         setState({...state, [n]: p});
     }
+    const [inp, setInp] = useState<string>("");
     const onClick = () => props.onSubmit(state);
     return (
         <div className={styles.authCard}>
@@ -46,6 +48,15 @@ export const AuthCard = (props: Props) => {
                     />
                 )
             })}
+            <SelectInput
+                label={"Gender"}
+                onChange={(p)=> {
+                    setInp(p);
+                    console.log(inp);
+                }}
+                selectOptions={["Male", "Female", "Trash"]}
+                placeHolder={"none"}
+            />
             <ButtonSpan text={"Create Account"} onClick={onClick}/>
         </div>
     );
