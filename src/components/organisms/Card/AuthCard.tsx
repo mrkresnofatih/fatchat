@@ -57,8 +57,8 @@ export const AuthCard = (props: Props) => {
             <SelectInput
                 label={"Gender"}
                 onChange={onChange("InputValue")}
-                selectOptions={["Male", "Female", "Trash"]}
-                placeHolder={"none"}
+                selectOptions={["Male", "Female"]}
+                placeHolder={"-"}
                 selectCurrentValue={state.InputValue}
             />
             <ButtonSpan text={"Create Account"} onClick={onClick}/>

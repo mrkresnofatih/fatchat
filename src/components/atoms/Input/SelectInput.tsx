@@ -22,7 +22,7 @@ export const SelectInput = (props: Props) => {
         onToggle();
     };
 
-    const valueOrRollback: string = (props.selectCurrentValue==="") ? "none": props.selectCurrentValue;
+    const valueOrRollback: string = (props.selectCurrentValue==="") ? props.placeHolder: props.selectCurrentValue;
 
     return (
         <Input
@@ -35,7 +35,11 @@ export const SelectInput = (props: Props) => {
                     >{valueOrRollback}</div>
                     <div className={`${styles.selectInputOptions} ${!collapse && styles.hide}`}>
                         {props.selectOptions.map((p, index) => (
-                            <div key={index} onClick={onSelect(p)} className={styles.selectInputMainBox}>{p}</div>
+                            <div
+                                key={index}
+                                onClick={onSelect(p)}
+                                className={`${styles.selectInputMainBox} ${styles.shadow}`}
+                            >{p}</div>
                         ))}
                     </div>
                 </div>
