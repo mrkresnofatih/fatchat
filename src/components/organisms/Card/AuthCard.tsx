@@ -24,13 +24,19 @@ type Props = {
     inputFields: inputField[],
     onSubmit: (s: Object) => void
 };
+
+type StateProps = {
+    Username: string,
+    Password: string,
+    InputValue: string
+}
+
 export const AuthCard = (props: Props) => {
-    const [state, setState] = useState<Object>({Username: "", Password: "", FullName: ""})
+    const [state, setState] = useState<StateProps>({Username: "", Password: "", InputValue: ""})
     const onChange = (n: string) => (p: string) => {
         console.log({...state, [n]: p});
         setState({...state, [n]: p});
     }
-    const [inp, setInp] = useState<string>("");
     const onClick = () => props.onSubmit(state);
     return (
         <div className={styles.authCard}>
@@ -50,12 +56,10 @@ export const AuthCard = (props: Props) => {
             })}
             <SelectInput
                 label={"Gender"}
-                onChange={(p)=> {
-                    setInp(p);
-                    console.log(inp);
-                }}
+                onChange={onChange("InputValue")}
                 selectOptions={["Male", "Female", "Trash"]}
                 placeHolder={"none"}
+                selectCurrentValue={state.InputValue}
             />
             <ButtonSpan text={"Create Account"} onClick={onClick}/>
         </div>
