@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import {ReactNode, useState} from 'react';
+import {ReactNode} from 'react';
 import styles from './authcard.module.css';
 import {Text} from "../../atoms/Text/Text";
 import {TextInput} from "../../atoms/Input/TextInput";
