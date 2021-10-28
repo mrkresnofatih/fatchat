@@ -13,5 +13,8 @@ export enum IconFileNames {
     CONTACTS_WHITE = "contacts_white.png",
     OUTLINE_CHAT_ORANGE = "outline_chat_orange.png",
     OUTLINE_CHAT_WHITE = "outline_chat_white.png",
-    PERSON_WHITE = "person_white.png"
+    PERSON_WHITE = "person_white.png",
+    PERSON_OUTLINE_ORANGE = "person_outline_orange.png",
+    LOGIN_CIRCLE_ORANGE = "login_circle_orange.png",
+    LOGIN_CIRCLE_WHITE = "login_circle_white.png"
 }

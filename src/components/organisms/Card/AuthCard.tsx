@@ -1,67 +1,68 @@
 // @flow
 import * as React from 'react';
-import {useState} from 'react';
+import {ReactNode, useState} from 'react';
 import styles from './authcard.module.css';
 import {Text} from "../../atoms/Text/Text";
-import {Avatar} from "../../atoms/Avatar/Avatar";
 import {TextInput} from "../../atoms/Input/TextInput";
 import {ButtonSpan} from "../Button/ButtonSpan";
 import {SelectInput} from "../../atoms/Input/SelectInput";
 
-type inputField = {
-    name: string,
+export type inputField = {
+    label: string,
     type: "text",
-    info: string
+    placeholder: string
 } | {
-    name: string,
+    label: string,
     type: "select",
-    info: string[]
+    placeholder: string,
+    selectOptions: string[]
 }
 
 type Props = {
     title: string,
-    imageUrl: string,
+    header: ReactNode,
     inputFields: inputField[],
-    onSubmit: (s: Object) => void
+    onSubmit: () => void,
+    onChange: (key: string) => (value: string) => void,
+    submitButtonText: string
 };
 
-type StateProps = {
-    Username: string,
-    Password: string,
-    InputValue: string
-}
-
 export const AuthCard = (props: Props) => {
-    const [state, setState] = useState<StateProps>({Username: "", Password: "", InputValue: ""})
-    const onChange = (n: string) => (p: string) => {
-        console.log({...state, [n]: p});
-        setState({...state, [n]: p});
-    }
-    const onClick = () => props.onSubmit(state);
+    const {onChange} = props;
+    const doSubmit = () => props.onSubmit();
     return (
         <div className={styles.authCard}>
             <Text text={props.title} className={styles.authCardTitle}/>
             <div className={styles.authCardAvatarBox}>
-                <Avatar src={props.imageUrl} size={100}/>
+                {props.header}
             </div>
             {props.inputFields.map((inputField, index) => {
-                return (
-                    <TextInput
-                        key={index}
-                        label={inputField.name}
-                        placeHolder={"placeholder"}
-                        onChange={onChange(inputField.name)}
-                    />
-                )
+                switch (inputField.type) {
+                    case "text":
+                        return (
+                            <TextInput
+                                key={index}
+                                label={inputField.label}
+                                placeHolder={inputField.placeholder}
+                                onChange={onChange(inputField.label)}
+                            />
+                        );
+                    case "select":
+                        return (
+                            <SelectInput
+                                key={index}
+                                label={inputField.label}
+                                onChange={onChange(inputField.label)}
+                                selectOptions={inputField.selectOptions}
+                                placeHolder={inputField.placeholder}
+                            />
+                        );
+                    default:
+                        return <></>;
+                }
+
             })}
-            <SelectInput
-                label={"Gender"}
-                onChange={onChange("InputValue")}
-                selectOptions={["Male", "Female"]}
-                placeHolder={"-"}
-                selectCurrentValue={state.InputValue}
-            />
-            <ButtonSpan text={"Create Account"} onClick={onClick}/>
+            <ButtonSpan text={props.submitButtonText} onClick={doSubmit}/>
         </div>
     );
 };

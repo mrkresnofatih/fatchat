@@ -10,19 +10,20 @@ type Props = {
     backgroundColor?: string,
     color?: string,
     selectOptions: string[],
-    selectCurrentValue: string,
     placeHolder: string
 };
 export const SelectInput = (props: Props) => {
+    const [value, setValue] = useState<string>("");
     const [collapse, setCollapse] = useState<boolean>(false);
     const onToggle = () => setCollapse(i => !i);
 
     const onSelect = (p: string) => () => {
         props.onChange(p);
+        setValue(p);
         onToggle();
     };
 
-    const valueOrRollback: string = (props.selectCurrentValue==="") ? props.placeHolder: props.selectCurrentValue;
+    const valueOrRollback: string = (value==="") ? props.placeHolder: value;
 
     return (
         <Input
