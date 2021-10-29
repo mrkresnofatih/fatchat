@@ -1,13 +1,13 @@
 import React from 'react';
 import {Page} from "./components/atoms/Page/Page";
 import {Center} from "./components/atoms/Center/Center";
-import {SignupCard} from "./components/organisms/Card/SignupCard";
+import {LoginCard} from "./components/organisms/Card/LoginCard";
 
 function App() {
     return (
         <Page wallpaper={"darkSnacks"}>
             <Center>
-                <SignupCard/>
+                <LoginCard/>
             </Center>
         </Page>
     );

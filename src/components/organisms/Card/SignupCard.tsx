@@ -40,7 +40,7 @@ export const SignupCard = (props: Props) => {
         }, {
             label: "Password",
             type: "text",
-            placeholder: "Secure w/ 6 characters"
+            placeholder: "Secure w/ min. 6 characters"
         }, {
             label: "Gender",
             type: "select",
@@ -57,6 +57,7 @@ export const SignupCard = (props: Props) => {
             onChange={onChange}
             onSubmit={onSubmit}
             title={"Signup"}
-            submitButtonText={"Create Account"}/>
+            submitButtonText={"Create Account"}
+        />
     );
 };
