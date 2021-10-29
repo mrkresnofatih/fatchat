@@ -22,11 +22,13 @@ export const LoginCard = (props: Props) => {
         {
             label: "Username",
             type: "text",
-            placeholder: "Minimum 6 characters"
+            placeholder: "Minimum 6 characters",
+            isDisabled: true
         }, {
             label: "Password",
             type: "text",
-            placeholder: "Minimum w/ min. 6 characters"
+            placeholder: "Minimum w/ min. 6 characters",
+            isDisabled: false
         }
     ];
 

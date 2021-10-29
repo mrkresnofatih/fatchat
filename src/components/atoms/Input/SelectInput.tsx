@@ -10,10 +10,13 @@ type Props = {
     backgroundColor?: string,
     color?: string,
     selectOptions: string[],
-    placeHolder: string
+    placeHolder: string,
+    isDisabled: boolean,
+    initialValue?: string
 };
 export const SelectInput = (props: Props) => {
-    const [value, setValue] = useState<string>("");
+    const initialValue = props.initialValue ? props.initialValue : "";
+    const [value, setValue] = useState<string>(initialValue);
     const [collapse, setCollapse] = useState<boolean>(false);
     const onToggle = () => setCollapse(i => !i);
 
@@ -28,6 +31,7 @@ export const SelectInput = (props: Props) => {
     return (
         <Input
             label={props.label}
+            isDisabled={props.isDisabled}
             Content={
                 <div className={styles.selectInputContainer}>
                     <div

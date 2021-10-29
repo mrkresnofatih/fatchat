@@ -1,13 +1,20 @@
 import React from 'react';
 import {Page} from "./components/atoms/Page/Page";
 import {Center} from "./components/atoms/Center/Center";
-import {LoginCard} from "./components/organisms/Card/LoginCard";
+import {EditProfileCard} from "./components/organisms/Card/EditProfileCard";
 
 function App() {
     return (
         <Page wallpaper={"darkSnacks"}>
             <Center>
-                <LoginCard/>
+                <EditProfileCard initialValues={
+                    {
+                        Username: "kresnofatih",
+                        DisplayName: "kresnofatih",
+                        Email: "kresnofatih@fattech.co.jp",
+                        StatusMessage: "Hello I'm Fatih XD!"
+                    }
+                }/>
             </Center>
         </Page>
     );

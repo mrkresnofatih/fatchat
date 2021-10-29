@@ -10,12 +10,16 @@ import {SelectInput} from "../../atoms/Input/SelectInput";
 export type inputField = {
     label: string,
     type: "text",
-    placeholder: string
+    placeholder: string,
+    isDisabled: boolean,
+    initialValue?: string
 } | {
     label: string,
     type: "select",
     placeholder: string,
-    selectOptions: string[]
+    selectOptions: string[],
+    isDisabled: boolean,
+    initialValue?: string
 }
 
 type Props = {
@@ -45,16 +49,20 @@ export const AuthCard = (props: Props) => {
                                 label={inputField.label}
                                 placeHolder={inputField.placeholder}
                                 onChange={onChange(inputField.label)}
+                                isDisabled={inputField.isDisabled}
+                                initialValue={inputField.initialValue}
                             />
                         );
                     case "select":
                         return (
                             <SelectInput
+                                initialValue={inputField.initialValue}
                                 key={index}
                                 label={inputField.label}
                                 onChange={onChange(inputField.label)}
                                 selectOptions={inputField.selectOptions}
                                 placeHolder={inputField.placeholder}
+                                isDisabled={inputField.isDisabled}
                             />
                         );
                     default:

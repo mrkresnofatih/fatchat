@@ -22,3 +22,10 @@
 .dummyDiv {
     height: 50px;
 }
+
+.disablingDiv {
+    height: 56px;
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+}

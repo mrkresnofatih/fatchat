@@ -30,18 +30,22 @@ export const SignupCard = (props: Props) => {
 
     const signUpInputFields: inputField[] = [
         {
+            isDisabled: false,
             label: "Username",
             type: "text",
             placeholder: "Minimum 6 characters"
         }, {
+            isDisabled: false,
             label: "Email",
             type: "text",
             placeholder: "e.g fatih@fattach.co.jp"
         }, {
+            isDisabled: false,
             label: "Password",
             type: "text",
             placeholder: "Secure w/ min. 6 characters"
         }, {
+            isDisabled: false,
             label: "Gender",
             type: "select",
             placeholder: "--select--",

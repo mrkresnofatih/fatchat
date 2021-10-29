@@ -9,10 +9,13 @@ type Props = {
     onChange?: (p: string) => void,
     backgroundColor?: string,
     color?: string,
-    placeHolder?: string
+    placeHolder?: string,
+    isDisabled: boolean,
+    initialValue?: string
 };
 export const TextInput = (props: Props) => {
-    const [text, setText] = useState<string>("");
+    const initialText = props.initialValue ? props.initialValue : "";
+    const [text, setText] = useState<string>(initialText);
     const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         setText(e.target.value);
         if (props.onChange) {
@@ -31,6 +34,7 @@ export const TextInput = (props: Props) => {
                 />
             }
             label={props.label}
+            isDisabled={props.isDisabled}
             backgroundColor={props.backgroundColor}
         />
     );
