@@ -16,12 +16,7 @@ type EditProfileForm = {
 }
 
 export const EditProfileCard = (props: Props) => {
-    const [formState, setFormState] = useState<EditProfileForm>({
-        Username: "",
-        DisplayName: "",
-        Email: "",
-        StatusMessage: ""
-    })
+    const [formState, setFormState] = useState<EditProfileForm>(props.initialValues)
 
     const onSubmit = () => console.log("SUBMIT: ", formState);
 
