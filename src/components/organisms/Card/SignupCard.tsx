@@ -43,9 +43,10 @@ export const SignupCard = (props: Props) => {
             isDisabled: false,
             label: "Password",
             type: "text",
-            placeholder: "Secure w/ min. 6 characters"
+            placeholder: "Secure w/ min. 6 characters",
+            isTypePassword: true
         }, {
-            isDisabled: false,
+            isDisabled: true,
             label: "Gender",
             type: "select",
             placeholder: "--select--",

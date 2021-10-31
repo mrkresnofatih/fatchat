@@ -12,7 +12,8 @@ export type inputField = {
     type: "text",
     placeholder: string,
     isDisabled: boolean,
-    initialValue?: string
+    initialValue?: string,
+    isTypePassword?: boolean
 } | {
     label: string,
     type: "select",
@@ -51,6 +52,7 @@ export const AuthCard = (props: Props) => {
                                 onChange={onChange(inputField.label)}
                                 isDisabled={inputField.isDisabled}
                                 initialValue={inputField.initialValue}
+                                isTypePassword={inputField.isTypePassword}
                             />
                         );
                     case "select":

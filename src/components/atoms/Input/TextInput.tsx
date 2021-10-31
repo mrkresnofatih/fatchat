@@ -11,7 +11,8 @@ type Props = {
     color?: string,
     placeHolder?: string,
     isDisabled: boolean,
-    initialValue?: string
+    initialValue?: string,
+    isTypePassword?: boolean
 };
 export const TextInput = (props: Props) => {
     const initialText = props.initialValue ? props.initialValue : "";
@@ -22,15 +23,17 @@ export const TextInput = (props: Props) => {
             props.onChange(e.target.value);
         }
     };
+    const inputType = (props.isTypePassword!==undefined) ? (props.isTypePassword ? "password" : "text") : "text";
     return (
         <Input
             Content={
                 <input
-                    className={styles.textInputContainer}
+                    className={`${styles.textInputContainer} ${props.isDisabled && styles.disableFontColor}`}
                     value={text}
                     onChange={onChange}
                     style={{color: props.color}}
                     placeholder={props.placeHolder}
+                    type={inputType}
                 />
             }
             label={props.label}

@@ -35,7 +35,7 @@ export const SelectInput = (props: Props) => {
             Content={
                 <div className={styles.selectInputContainer}>
                     <div
-                        className={`${styles.selectInputMainBox} ${styles.borderRound}`}
+                        className={`${styles.selectInputMainBox} ${styles.borderRound} ${props.isDisabled && styles.disabledFontColor}`}
                         onClick={onToggle}
                     >{valueOrRollback}</div>
                     <div className={`${styles.selectInputOptions} ${!collapse && styles.hide}`}>
